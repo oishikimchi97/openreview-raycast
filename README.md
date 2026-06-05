@@ -32,18 +32,32 @@ detail page.
 `⌘R` refreshes. Search matches the submission number via keywords even though it
 isn't shown in the row.
 
-## Setup
+## Install locally (no Store)
 
-1. Build / import the extension into Raycast:
-   ```bash
-   npm install
-   npm run dev      # opens it in Raycast for development
-   ```
-   (or `npm run build` to produce a distribution build).
-2. In Raycast, open the extension's **preferences** and set:
+Raycast (macOS) and Node 20+ required.
+
+```bash
+git clone https://github.com/oishikimchi97/openreview-raycast.git
+cd openreview-raycast
+npm install
+npm run dev
+```
+
+`npm run dev` builds the extension and **imports it into Raycast** — it then
+stays in your Raycast extension list even after you stop the dev process
+(`Ctrl-C`). Alternatively, open Raycast → search **"Import Extension"** → select
+this folder.
+
+Then:
+
+1. In Raycast, open the **OpenReview** extension's preferences (`⌘,` on it) and set:
    - **OpenReview Email** — the email you log in to OpenReview with.
-   - **OpenReview Password** — your OpenReview password (stored securely by Raycast).
-3. Run **My Submissions**.
+   - **OpenReview Password** — stored securely in Raycast (macOS Keychain), only
+     used to fetch a session token.
+2. Run the **My Submissions** command.
+
+To pick up later changes, run `git pull` and `npm run dev` again. `npm run build`
+produces a production build without importing.
 
 ## Authentication & security
 
