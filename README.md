@@ -3,6 +3,8 @@
 See your OpenReview submissions, review scores, and decisions across every
 venue — straight from Raycast. A read-only mirror of OpenReview's Author Console.
 
+> 🚧 **Raycast Store:** under review — [raycast/extensions#28567](https://github.com/raycast/extensions/pull/28567)
+
 ![My Submissions](metadata/openreview-1.png)
 ![Submission detail](metadata/openreview-2.png)
 
